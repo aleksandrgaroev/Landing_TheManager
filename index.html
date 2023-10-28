@@ -2,23 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="normalize.css">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <link href="normalize.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,600;1,700&display=swap"
           rel="stylesheet">
-    <title>Document</title>
+    <title>Tower Landing</title>
 </head>
 <body>
 <header class="header">
     <div class="container">
         <div class="header__content">
             <div class="header__logo">
-                <img src="assets/sas.svg" alt="logo"/>
+                <img alt="logo" src="assets/sas.svg"/>
                 <div class="header__logo-title">TheManager</div>
             </div>
             <div class="nav">
@@ -51,12 +51,12 @@
             </div>
             <div class="gallery__controls">
                 <div class="gallery__control">
-                    <img class="gallery__control-arrow" src="assets/arrow-left.svg" alt="left"/>
+                    <img alt="left" class="gallery__control-arrow" src="assets/arrow-left.svg"/>
                     <div class="gallery__control-text">Back</div>
                 </div>
                 <div class="gallery__control">
                     <div class="gallery__control-text">Next</div>
-                    <img class="gallery__control-arrow" src="assets/arrow-right.svg" alt="right"/>
+                    <img alt="right" class="gallery__control-arrow" src="assets/arrow-right.svg"/>
                 </div>
             </div>
         </div>
@@ -70,11 +70,33 @@
                 </div>
                 <div class="task-manager__body">
                     <div class="task-manager__controller">
-                        <input class="task-manager-input" type="text" placeholder="New task..."/>
-                        <select name="priority" id="priority">
+                        <input class="task-manager-input" placeholder="New task..." type="text"/>
+                        <select id="priority" name="priority">
                             <option value="priority">Priority</option>
                         </select>
                         <div class="task-manager-btn">Add</div>
+                    </div>
+                    <div class="task-manager__list">
+                        <div class="task">
+                            <div class="task__priority task__priority--blue">2</div>
+                            <p class="task__name">Task name</p>
+                        </div>
+                        <div class="task">
+                            <div class="task__priority task__priority--blue">2</div>
+                            <p class="task__name">Task name</p>
+                        </div>
+                        <div class="task">
+                            <div class="task__priority task__priority--green">1</div>
+                            <p class="task__name">Task name</p>
+                        </div>
+                        <div class="task">
+                            <div class="task__priority task__priority--green">1</div>
+                            <p class="task__name">Task name</p>
+                        </div>
+                        <div class="task">
+                            <div class="task__priority task__priority--red">3</div>
+                            <p class="task__name">Task name</p>
+                        </div>
                     </div>
                 </div>
             </div>
