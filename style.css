@@ -1,0 +1,225 @@
+:root {
+    --primary: #2947A9;
+    --secondary: #F9995D;
+}
+
+/*@property --angle {*/
+/*    syntax: '<angle>';*/
+/*    initial-value: 0deg;*/
+/*    inherits: false;*/
+/*}*/
+
+body {
+    font-family: 'Work Sans', sans-serif;
+}
+
+.container {
+    /*border: 1px solid black;*/
+    margin: 0 auto;
+    max-width: 1486px;
+    width: calc(100% - 2 * 30px);
+}
+
+.header__content {
+    display: flex;
+    margin: 16px auto;
+    justify-content: space-between;
+}
+
+.header__logo {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.header__logo-title {
+    align-self: center;
+    color: var(--primary);
+    font-size: 30px;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.nav__content {
+    list-style-type: none;
+    display: flex;
+    gap: 50px;
+}
+
+.nav__link {
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 400;
+    transition: all 0.3s ease-in-out;
+    border: 0 solid transparent;
+    border-bottom-width: 1px;
+    /*border-image-slice: 1;*/
+}
+
+.nav__link:hover {
+    /*--angle: 0deg;*/
+    /*border-image-source: linear-gradient(var(--angle), #1b39bf00, #1b39bf);*/
+    /*animation: 2s rotate linear infinite;*/
+    border-bottom-color: black;
+    transform: translateY(-2px);
+}
+
+.nav__link--contacts:hover {
+    /*border-image-source: linear-gradient(var(--angle), #e57f60, #e57f6000);*/
+    border-bottom-color: var(--secondary);;
+}
+
+
+/*@keyframes rotate {*/
+/*    to {*/
+/*        --angle: 360deg;*/
+/*    }*/
+/*}*/
+
+
+.nav__link--contacts {
+    color: var(--secondary);
+    font-weight: 600;
+}
+
+.gallery {
+    position: relative;
+    min-height: 640px;
+}
+
+.gallery__content {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.gallery__image {
+    background-image: url("assetsound.jpg");
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 40%;
+}
+
+.gallery __mask {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.90) 15%, rgba(255, 255, 255, 0.00) 82%);
+}
+
+.gallery__text {
+    position: absolute;
+    top: 50%;
+    left: 240px;
+    font-size: 72px;
+    font-weight: 600;
+    max-width: 556px;
+    transform: translate(-25%, -50%);
+}
+
+.gallery__manager {
+    max-width: 416px;
+    color: #ffffff;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.gallery__manager-body {
+    background-color: var(--primary);
+    box-sizing: content-box;
+    padding: 20px 0 26px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-height: 150px;
+}
+
+.gallery__manager-header {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.gallery__manager-text {
+    font-size: 24px;
+    margin: 0 52px;
+    text-align: center;
+}
+
+.gallery__controls {
+    display: flex;
+    flex-direction: row;
+    gap: 1px;
+}
+
+.gallery__control {
+    background-color: #292E3D;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+    gap: 10px;
+    cursor: pointer;
+    flex-grow: 1;
+}
+
+.manager-container {
+    background-color: #F6F8F7;
+    padding: 28px 0 50px;
+}
+
+.manager-wrapper {
+    margin: auto;
+    max-width: 540px;
+}
+
+.manager-container__header {
+    font-weight: 600;
+    font-size: 48px;
+    text-align: center;
+    margin-bottom: 26px;
+}
+
+.task-manager {
+    background-color: white;
+    box-sizing: content-box;
+    padding: 11px 20px;
+    border-radius: 10px;
+}
+
+.task-manager__header {
+    text-align: center;
+    margin-bottom: 30px;
+    font-weight: 600;
+    font-size: 36px;
+}
+
+.task-manager__controller {
+    display: flex;
+    gap: 15px;
+}
+
+.task-manager-btn {
+    color: #ffffff;
+    background-color: var(--primary);
+    padding: 10px 25px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    flex-grow: 2;
+    text-align: center;
+}
+
+.task-manager-input {
+    flex-grow: 5;
+}
+
+#priority {
+    flex-grow: 2;
+}
