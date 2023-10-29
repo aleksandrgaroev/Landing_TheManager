@@ -69,39 +69,65 @@
                     my tasks
                 </div>
                 <div class="task-manager__body">
-                    <div class="task-manager__controller">
-                        <input class="task-manager-input" placeholder="New task..." type="text"/>
-                        <select id="priority" name="priority">
+                    <div class="task-controller">
+                        <input class="task-input" placeholder="New task..." type="text"/>
+                        <select class="task-selector" id="priority" name="priority">
                             <option value="priority">Priority</option>
                         </select>
-                        <div class="task-manager-btn">Add</div>
+                        <div class="task-btn">Add</div>
                     </div>
-                    <div class="task-manager__list">
-                        <div class="task">
-                            <div class="task__priority task__priority--blue">2</div>
-                            <p class="task__name">Task name</p>
+                    <div class="task-data">
+                        <div class="task-item">
+                            <div class="task-priority task-priority--medium">2</div>
+                            <div class="task-name">Task name</div>
                         </div>
-                        <div class="task">
-                            <div class="task__priority task__priority--blue">2</div>
-                            <p class="task__name">Task name</p>
+                        <div class="task-item">
+                            <div class="task-priority task-priority--medium">2</div>
+                            <div class="task-name">Task name</div>
                         </div>
-                        <div class="task">
-                            <div class="task__priority task__priority--green">1</div>
-                            <p class="task__name">Task name</p>
+                        <div class="task-item">
+                            <div class="task-priority task-priority--low">1</div>
+                            <div class="task-name">Task name</div>
                         </div>
-                        <div class="task">
-                            <div class="task__priority task__priority--green">1</div>
-                            <p class="task__name">Task name</p>
+                        <div class="task-item">
+                            <div class="task-priority task-priority--low">1</div>
+                            <div class="task-name">Task name</div>
                         </div>
-                        <div class="task">
-                            <div class="task__priority task__priority--red">3</div>
-                            <p class="task__name">Task name</p>
+                        <div class="task-item task-item--done">
+                            <div class="task-priority task-priority--high">3</div>
+                            <div class="task-name task-name--done">Task name</div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <div class="contacts">
+        <div class="contacts-wrapper">
+            <div class="contacts-container">
+                <div class="contacts-body">
+                    <div class="contacts-header">What can we do for you?</div>
+                    <div class="contacts-text">We are ready to work on a project of any complexity, whether it’s
+                        commercial or residential.
+                    </div>
+                    <div class="contacts-form">
+                        <div class="contacts-info">
+                            <input class="contacts-name" placeholder="Name" type="text" name=""/>
+                            <input class="contacts-email" placeholder="Email" type="email" name=""/>
+                        </div>
+                        <textarea class="contacts-message" placeholder="Message..." name=""></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="contacts-btn">Submit</button>
+
+            </div>
+        </div>
+    </div>
 </main>
+<footer class="footer">
+    <div class="footer-wrapper">
+        <div class="footer-text">TheManager © 2023. All Rights Reserved</div>
+    </div>
+</footer>
 </body>
 </html>

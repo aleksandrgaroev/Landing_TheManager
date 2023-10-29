@@ -2,7 +2,10 @@
     --primary: #2947A9;
     --secondary: #F9995D;
     --extra-grey: #A3AAC2;
-    --light-primary: #243B86;
+    --priority-medium: #6F95F5;
+    --priority-low: #67D972;
+    --priority-high: #FB2A2A;
+    --primary-hover: #243B86;
 }
 
 /*@property --angle {*/
@@ -175,7 +178,7 @@ body {
 }
 
 .gallery__control:hover {
-    background-color: var(--light-primary);
+    background-color: var(--primary-hover);
 }
 
 .manager-container {
@@ -196,7 +199,10 @@ body {
 }
 
 .task-manager__body {
-    height: 540px;
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    gap: 30px;
 }
 
 .task-manager {
@@ -213,12 +219,12 @@ body {
     font-size: 36px;
 }
 
-.task-manager__controller {
+.task-controller {
     display: flex;
     gap: 15px;
 }
 
-.task-manager-btn {
+.task-btn {
     color: #ffffff;
     background-color: var(--primary);
     padding: 10px 25px;
@@ -226,37 +232,52 @@ body {
     border-radius: 10px;
     text-align: center;
     cursor: pointer;
+    flex-grow: 1;
+
+    transition: all 0.2s ease-in-out;
 }
 
-.task-manager-input {
+.task-btn:hover {
+    background-color: var(--primary-hover);
+}
+
+.task-input {
     appearance: none;
     border: 1px solid var(--extra-grey);
     border-radius: 4px;
     color: var(--extra-grey);
     padding: 10px 8px;
-    min-width: 250px;
+    min-width: 120px;
+    flex-grow: 5;
 }
 
-#priority {
+::placeholder {
+    color: var(--extra-grey);
+    opacity: 1;
+}
+
+.task-selector {
     appearance: none;
     color: var(--extra-grey);
-    padding: 10px 38px 10px 8px;
+    padding: 10px 8px;
+    height: 100%;
+    min-width: 110px;
 
     background-image: url("assets/arrow-dropdown.svg");
     background-position: right 8px center !important;
     background-repeat: no-repeat;
     border: 1px solid var(--extra-grey);
     border-radius: 4px;
+    flex-grow: 2;
 }
 
-.task-manager__list {
+.task-data {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    margin: 30px 0;
 }
 
-.task {
+.task-item {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -264,9 +285,26 @@ body {
     border: 1px solid var(--extra-grey);
     border-radius: 4px;
     gap: 10px;
+
+    transition: all 0.2s ease-in-out;
 }
 
-.task__priority {
+.task-item:hover {
+    background-color: #C2C7D6;
+}
+
+.task-item:active {
+    background-color: #E0E3EB;
+}
+.task-item--done {
+    background-color: #A3AAC2;
+}
+
+.task-name--done {
+    text-decoration: line-through;
+}
+
+.task-priority {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -274,9 +312,130 @@ body {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background-color: #2947A9;
+    background-color: black;
 }
 
-.task__name {
+.task-priority--high {
+    background-color: var(--priority-high);
+}
+
+.task-priority--medium {
+    background-color: var(--priority-medium);
+}
+
+.task-priority--low {
+    background-color: var(--priority-low);
+}
+
+.task-name {
     margin: 0;
 }
+
+.contacts {
+    background-color: #E0E3EB;
+    padding: 60px 0;
+}
+
+.contacts-wrapper {
+    margin: auto;
+    max-width: 750px;
+}
+
+.contacts-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 85px;
+}
+
+.contacts-body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 72%;
+}
+
+.contacts-header {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.contacts-text {
+    text-align: center;
+    font-size: 20px;
+}
+
+.contacts-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contacts-info {
+    display: flex;
+    flex-direction: row;
+    gap: 1px;
+}
+
+.contacts-name, .contacts-email {
+    border: none;
+    border-radius: 4px;
+    padding: 10px 8px;
+}
+
+.contacts-name {
+    width: 0;
+    flex-grow: 1;
+}
+
+.contacts-email {
+    width: 0;
+    flex-grow: 3;
+}
+
+.contacts-message {
+    border: none;
+    border-radius: 4px;
+    padding: 10px 8px;
+    appearance: none;
+    min-height: 135px;
+    max-width: 100%;
+
+    resize: none;
+}
+
+.contacts-btn {
+    border: none;
+    border-radius: 4px;
+    padding: 16px 0;
+    font-size: 18px;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+    color: white;
+    background-color: var(--primary);
+
+    transition: all 0.2s ease-in-out;
+}
+
+.contacts-btn:hover {
+    background-color: var(--primary-hover);
+}
+
+.footer {
+    padding: 25px 0;
+    background-color: var(--primary);
+}
+
+.footer-wrapper {
+    margin: auto;
+    width: 90%;
+}
+
+.footer-text {
+    color: white;
+    font-weight: 400;
+    font-size: 16px;
+}
+
