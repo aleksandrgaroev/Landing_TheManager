@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <link href="normalize.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,400;0,600;1,700&display=swap"
+          rel="stylesheet">
+    <title>Tower Landing</title>
+</head>
+<body>
+<header class="header">
+    <div class="container">
+        <div class="header__content">
+            <div class="header__logo">
+                <img alt="logo" src="assets/sas.svg"/>
+                <div class="header__logo-title">TheManager</div>
+            </div>
+            <div class="nav">
+                <ul class="nav__content">
+                    <li><a class="nav__link" href="#">Home</a></li>
+                    <li><a class="nav__link" href="#">About Us</a></li>
+                    <li><a class="nav__link" href="#">Projects</a></li>
+                    <li><a class="nav__link" href="#">Services</a></li>
+                    <li><a class="nav__link nav__link--contacts" href="#">Contacts Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+<main>
+    <div class="gallery">
+        <div class="gallery__content">
+            <div class="gallery__image"></div>
+            <div class="gallery__mask"></div>
+            <div class="gallery__text">Managing tasks <br> is our mission.</div>
+        </div>
+        <div class="gallery__manager">
+            <div class="gallery__manager-body">
+                <div class="gallery__manager-header">
+                    Future Projects
+                </div>
+                <div class="gallery__manager-text">
+                    Presentation of World Best Task manager ever
+                </div>
+            </div>
+            <div class="gallery__controls">
+                <div class="gallery__control">
+                    <img alt="left" class="gallery__control-arrow" src="assets/arrow-left.svg"/>
+                    <div class="gallery__control-text">Back</div>
+                </div>
+                <div class="gallery__control">
+                    <div class="gallery__control-text">Next</div>
+                    <img alt="right" class="gallery__control-arrow" src="assets/arrow-right.svg"/>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="manager-container">
+        <div class="manager-wrapper">
+            <div class="manager-container__header">Try it yourself!</div>
+            <div class="task-manager">
+                <div class="task-manager__header">
+                    my tasks
+                </div>
+                <div class="task-manager__body">
+                    <div class="task-controller">
+                        <input class="task-input" placeholder="New task..." type="text"/>
+                        <select class="task-selector" id="priority" name="priority">
+                            <option value="priority">Priority</option>
+                        </select>
+                        <div class="task-btn">Add</div>
+                    </div>
+                    <div class="task-data">
+                        <div class="task-item">
+                            <div class="task-priority task-priority--medium">2</div>
+                            <div class="task-name">Task name</div>
+                        </div>
+                        <div class="task-item">
+                            <div class="task-priority task-priority--medium">2</div>
+                            <div class="task-name">Task name</div>
+                        </div>
+                        <div class="task-item">
+                            <div class="task-priority task-priority--low">1</div>
+                            <div class="task-name">Task name</div>
+                        </div>
+                        <div class="task-item">
+                            <div class="task-priority task-priority--low">1</div>
+                            <div class="task-name">Task name</div>
+                        </div>
+                        <div class="task-item task-item--done">
+                            <div class="task-priority task-priority--high">3</div>
+                            <div class="task-name task-name--done">Task name</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contacts">
+        <div class="contacts-wrapper">
+            <div class="contacts-container">
+                <div class="contacts-body">
+                    <div class="contacts-header">What can we do for you?</div>
+                    <div class="contacts-text">We are ready to work on a project of any complexity, whether it’s
+                        commercial or residential.
+                    </div>
+                    <div class="contacts-form">
+                        <div class="contacts-info">
+                            <input class="contacts-name" placeholder="Name" type="text" name=""/>
+                            <input class="contacts-email" placeholder="Email" type="email" name=""/>
+                        </div>
+                        <textarea class="contacts-message" placeholder="Message..." name=""></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="contacts-btn">Submit</button>
+
+            </div>
+        </div>
+    </div>
+</main>
+<footer class="footer">
+    <div class="footer-wrapper">
+        <div class="footer-text">TheManager © 2023. All Rights Reserved</div>
+    </div>
+</footer>
+</body>
+</html>
